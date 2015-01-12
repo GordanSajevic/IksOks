@@ -11,12 +11,14 @@ import javax.swing.JPanel;
 
 public class IksOksGUI {
 	
-	static JFrame window = new JFrame();
-	static JPanel panel = new JPanel();
 	static JButton[] buttons = new JButton[9];
 
 	public static void main(String[] args) {
 		
+		//U main funkciji kreiramo frame i panel, zatim na panel "nalijepimo" sve dugmiæe
+		
+		JFrame window = new JFrame();
+		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(3, 3));
 		ButtonHandler handler = new ButtonHandler();
 		for (int i=0; i<9; i++)
@@ -31,6 +33,8 @@ public class IksOksGUI {
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
+	//ButtonHandler za dugmiæe
+	
 	public static class ButtonHandler implements ActionListener
 	{
 
